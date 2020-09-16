@@ -29,7 +29,7 @@ http-response ^https?:\/\/api\.zhihu\.com\/settings\/blocked_users requires-body
 http-response ^https?:\/\/api\.zhihu\.com\/v4\/questions requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_回答列表去广告及黑名单增强
 http-response ^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message\?|timeline\/entry\/system_message) requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_官方消息去广告
 http-response ^https?:\/\/api\.zhihu\.com\/search\/preset_words\? requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_预置关键词去广告
-http-response ^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/ requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_付费内容提醒
+# http-response ^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/ requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_付费内容提醒
 
 [MITM]
 hostname = www.zhihu.com,api.zhihu.com
