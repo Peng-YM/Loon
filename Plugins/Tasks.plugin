@@ -1,24 +1,28 @@
+[Rule]
+DOMAIN-SUFFIX,rsshub.app
+DOMAIN-SUFFIX,steamdb.info,DIRECT
+
 [Script]
 # 彩云天气
 http-request https://weather-data.apple.com script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, require-body=false
 
-cron "0 0-21/3 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气
+cron "31 8-21 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气
 
 # 纵横小说
-6 0 * * * script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/zongheng.js, tag=纵横小说
+cron "*/10 * * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/zongheng.js, tag=纵横小说
 
 # GitHub监控
-cron "8 0 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js, tag=GitHub
+cron "*/10 * * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js, tag=GitHub
 
 # Steam价格监控
-cron "8 0 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/steam.js, tag=Steam价格监控
+cron "9 0 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/steam.js, tag=Steam价格监控
 
 # 汇率监控
-cron "8 0 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/exchange.js, tag=汇率监控
+cron "9 0 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/exchange.js, tag=汇率监控
 
 # Epic周免
-cron "0 8 */7 * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/epic.js,  tag=Epic周免
+cron "59 23 * * THU" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/epic.js,  tag=Epic周免
 
 # PSN会免
-cron "0 9 1 * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/psn.js, tag=PSN会免
+cron "0 9 10 * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/psn.js, tag=PSN会免
 
