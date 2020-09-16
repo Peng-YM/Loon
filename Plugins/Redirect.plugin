@@ -1,0 +1,21 @@
+[URL Rewrite]
+
+# Redirect Google Search Service
+^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
+
+# Redirect Google Maps Service
+^(http|https):\/\/(ditu|maps).google\.cn https://maps.google.com 302
+
+# Redirect HTTP to HTTPS
+^(http|https):\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
+^(http|https):\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
+^(http|https):\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
+^(http|https):\/\/you\.163\.com\/ https://you.163.com/ 302
+^(http|https):\/\/(www.)?suning\.com\/ https://suning.com/ 302
+^(http|https):\/\/(www.)?yhd\.com\/ https://yhd.com/ 302
+
+# Weibo Short URL
+^http:\/\/t\.cn https://sinaurl.cn 302
+
+[MITM]
+hostname = www.google.cn
