@@ -1,0 +1,13 @@
+[MITM]
+hostname = license.pdfexpert.com, mobile-api.adguard.com, claritywallpaper.com, ayk.tmdidi.com, m.pearkin.com, www.baidu.com2.club, souhu.mett.me, bkcd.b-cdn.net, cn.youku-ca.com
+
+
+[Script]
+# > AdGuard
+
+
+# > Pear
+http-response ^https:\/\/(www\.baidu.com2\.club|ayk\.tmdidi\.com|m\.pearkin\.com|souhu\.mett\.me|bkcd\.b-cdn\.net)\/(api\/movie\/WatchMovie|api\/Account\/CheckVip|api\/account\/IndexDetail) script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/pear.js, requires-body=1
+
+# > Documents
+http-response ^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/documents.js,requires-body=1
