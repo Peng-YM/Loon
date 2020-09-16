@@ -1,13 +1,16 @@
 [MITM]
-hostname = license.pdfexpert.com, mobile-api.adguard.com, claritywallpaper.com, ayk.tmdidi.com, m.pearkin.com, www.baidu.com2.club, souhu.mett.me, bkcd.b-cdn.net, cn.youku-ca.com
+hostname = license.pdfexpert.com,mobile-api.adguard.com,ayk.tmdidi.com,m.pearkin.com,www.baidu.com2.club,souhu.mett.me,bkcd.b-cdn.net,cn.youku-ca.com
 
+[URL Rewrite]
+# > AdGuard
+^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ https://raw.githubusercontent.com/langkhach270389/Scripting/master/Adguard.rsp 302
 
 [Script]
-# > AdGuard
-
-
 # > Pear
-http-response ^https:\/\/(www\.baidu.com2\.club|ayk\.tmdidi\.com|m\.pearkin\.com|souhu\.mett\.me|bkcd\.b-cdn\.net)\/(api\/movie\/WatchMovie|api\/Account\/CheckVip|api\/account\/IndexDetail) script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/pear.js, requires-body=1
+http-response ^https:\/\/(www\.baidu.com2\.club|ayk\.tmdidi\.com|m\.pearkin\.com|souhu\.mett\.me|bkcd\.b-cdn\.net)\/(api\/movie\/WatchMovie|api\/Account\/CheckVip|api\/account\/IndexDetail) script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/pear.js, requires-body=1,tag=Pear
 
 # > Documents
-http-response ^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/documents.js,requires-body=1
+http-response ^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/documents.js,requires-body=1,tag=Documents
+
+# > Keep
+http-response ^https:\/\/api\.gotokeep\.com\/(.+\/subject|.+\/dynamic) requires-body=1,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/NobyDa/Surge/JS/Keep.js,tag=Keep
