@@ -1,0 +1,5 @@
+[Script]
+http-request ^https:\/\/m\.weibo\.cn\/feed\/ script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js
+
+[mitm]
+hostname = m.weibo.cn
