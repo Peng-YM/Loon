@@ -16,4 +16,4 @@ http-response ^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscripti
 http-response ^https:\/\/api\.gotokeep\.com\/(.+\/subject|.+\/dynamic) requires-body=1,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/NobyDa/Surge/JS/Keep.js,tag=Keep
 
 # > Pillow
-https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) url script-response-body nzw9314/Script/pillow.js
+http-response ^https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) requires-body=1,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/pillow.js
